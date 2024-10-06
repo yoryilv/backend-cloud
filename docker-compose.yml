@@ -2,7 +2,7 @@ version: '3'
 services:
   # Microservicio de Estudiantes (Python + MySQL)
   estudiantes_service:
-    build: ./university-microservice-1
+    build: ./estudiantes_service
     container_name: estudiantes_service
     environment:
       - DATABASE_URL=mysql://user:password@db_estudiantes:3306/estudiantes_db
@@ -29,7 +29,7 @@ services:
 
   # Microservicio de Cursos (Java + PostgreSQL)
   cursos_service:
-    build: ./microservice_courses
+    build: ./cursos_service
     container_name: cursos_service
     environment:
       - SPRING_DATASOURCE_URL=jdbc:postgresql://db_cursos:5432/cursos_db
@@ -59,7 +59,7 @@ services:
 
   # Microservicio de Evaluaciones (Node.js + MongoDB)
   evaluaciones_service:
-    build: ./microservice_evaluaciones
+    build: ./evaluaciones_service
     container_name: evaluaciones_service
     environment:
       - MONGO_URL=mongodb://db_evaluaciones:27017/evaluaciones_db
