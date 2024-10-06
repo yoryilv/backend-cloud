@@ -1,6 +1,5 @@
 HELP.md
-target/
-!target/microservice_courses-0.0.1-SNAPSHOT.jar  # Excepción para no ignorar el archivo JAR generado
+target/  # Ignora completamente la carpeta target y todo su contenido
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
