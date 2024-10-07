@@ -26,6 +26,10 @@ def get_db():
     finally:
         db_session.close()
 
+@app.get("/items/{item_id}")
+def read_item(item_id: int, q: str = None):
+    return {"item_id": item_id, "q": q}
+
 @app.get("/estudiantes", response_model=List[EstudianteModel])
 def get_estudiantes(db: Session = Depends(get_db)):
     estudiantes = db.query(Estudiante).all()
