@@ -25,7 +25,7 @@ const swaggerOptions = {
       version: "1.0.0",
     },
   },
-  apis: ["./routes/*.js"], // Ruta de tus archivos de rutas donde documentarás los endpoints
+  apis: ["./routes/*.js"],
 };
 
 const swaggerDocs = swaggerJsDoc(swaggerOptions);
